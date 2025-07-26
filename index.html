@@ -1,0 +1,250 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maafin Abang Ya Adekku!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: #fff5f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 105, 152, 0.2);
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transform: rotate(-1deg);
+        }
+        
+        h1 {
+            color: #ff6b98;
+            font-size: 28px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::before, h1::after {
+            content: "❤️";
+            position: absolute;
+            font-size: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        h1::before {
+            left: -30px;
+        }
+        
+        h1::after {
+            right: -30px;
+        }
+        
+        .sticker {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .sticker:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .message-box {
+            background-color: #fff0f5;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .message-box p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .signature {
+            font-weight: bold;
+            color: #ff6b98;
+            font-size: 18px;
+        }
+        
+        .btn-forgive {
+            background-color: #ff6b98;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(255, 107, 152, 0.3);
+        }
+        
+        .btn-forgive:hover {
+            background-color: #ff4d88;
+            transform: translateY(-3px);
+        }
+        
+        .heart {
+            color: red;
+            font-size: 18px;
+            display: inline-block;
+            animation: heartbeat 1.2s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% {transform: scale(1);}
+            25% {transform: scale(1.2);}
+            40% {transform: scale(1);}
+            60% {transform: scale(1.2);}
+            100% {transform: scale(1);}
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff6b98;
+            opacity: 0.7;
+        }
+        
+        .surprise {
+            display: none;
+            margin-top: 20px;
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% {transform: translateY(0);}
+            50% {transform: translateY(-15px);}
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+        
+        .float { animation: float 3s ease-in-out infinite; }
+        .bounce { animation: bounce 2s infinite; }
+        
+        /* Positioning decorative stickers */
+        .sticker-1 {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            animation-delay: 0.2s;
+        }
+        
+        .sticker-2 {
+            position: absolute;
+            bottom: -30px;
+            right: 20px;
+            animation-delay: 0.4s;
+        }
+        
+        .confetti-1 { top: 10%; left: 15%; }
+        .confetti-2 { top: 20%; left: 30%; }
+        .confetti-3 { top: 5%; left: 70%; }
+        .confetti-4 { top: 15%; left: 85%; }
+        .confetti-5 { top: 25%; right: 15%; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Confetti decorations -->
+        <div class="confetti confetti-1"></div>
+        <div class="confetti confetti-2"></div>
+        <div class="confetti confetti-3"></div>
+        <div class="confetti confetti-4"></div>
+        <div class="confetti confetti-5"></div>
+        
+        <!-- Emoji decorations - animated tears -->
+        <div class="sticker bounce" style="font-size:60px;" title="Adek jangan marah ya">🥹💕</div>
+        
+        <h1>MAFIN ABANG YA ADEK CANTIK! 💖</h1>
+        
+        <div class="message-box">
+            <p>Hai Adekku yang cantik 💕,</p>
+            <p>Abang Alfin benar-benar minta maaf sebesar-besarnya ya...</p> 
+            <p>Abang sedih kalau kamu sedih 😢</p>
+            <p>Janji abang bakal jadi lebih baik lagi! 💝</p>
+            <p class="signature">Sayang banget sama kamu! <span class="heart">❤️</span> - Abang Alfin</p>
+        </div>
+        
+        <div>
+            <div class="sticker float" style="font-size:100px;">🥹👉👈</div>
+        </div>
+        
+        <div style="display: flex; justify-content: center; gap: 15px; margin: 20px 0;">
+            <div>
+                <div class="sticker" style="font-size:60px;">😭</div>
+                <p style="font-size: 14px;">Adek sedih 😢</p>
+            </div>
+            <div>
+                <div class="sticker" style="font-size:60px;">💔</div>
+                <p style="font-size: 14px;">Hati abang sakit</p>
+            </div>
+            <div>
+                <div class="sticker" style="font-size:60px;">😊</div>
+                <p style="font-size: 14px;">Harusnya gini dong</p>
+            </div>
+        </div>
+        
+        <button class="btn-forgive" onclick="forgive()">
+            KLIK INI KALAU UDAH MAFIN ABANG ALFIN ❤️
+        </button>
+        
+        <div id="surprise" class="surprise">
+            <div class="sticker bounce" style="font-size:80px;">🥰</div>
+            <p style="font-weight: bold; color: #ff6b98; font-size: 18px; margin-top: 10px;">YAAAY! MAKASIH YA ADEK! 💖</p>
+            <p style="color: #ff6b98;">Mulai sekarang abang bakal selalu buat kamu tersenyum 😊</p>
+        </div>
+    </div>
+
+    <script>
+        function forgive() {
+            document.getElementById('surprise').style.display = 'block';
+            
+            // Create more confetti
+            for(let i = 0; i < 10; i++) {
+                let confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.top = Math.random() * 100 + '%';
+                document.querySelector('.container').appendChild(confetti);
+            }
+            
+            // Play a cute sound (optional)
+            let audio = new Audio('https://www.soundjay.com/buttons/sounds/button-10.mp3');
+            audio.volume = 0.3;
+            audio.play();
+        }
+    </script>
+</body>
+</html>
+```
